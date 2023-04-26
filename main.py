@@ -36,10 +36,10 @@ def catch_all(path=""):
     prompt = prompt.replace("{{URL_PATH}}", path)
     
     response = openai.Completion.create(
-        model="text-davinci-003",
+        model="GPT-3.5-turbo",
         prompt=prompt,
         temperature=0.7,
-        max_tokens=512,
+        max_tokens=1000,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0
